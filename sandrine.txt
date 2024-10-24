@@ -1,0 +1,140 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> drop database ruhande;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> create database ruhande;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use ruhande;
+Database changed
+mysql> create table ruhande(id int(16),f_name char(20),l_name char(20),gender char(20),province char(20),district char(20),sector char(20),cell char(20),email char(20),tel_number char(20));
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+mysql> insert into ruhande values(1200070103626042,'cavin','ishimwe','mall','north','musanze','muhoza','kagoma','ishimwecavin@gmail.com','0786454628');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ruhande values(1200170103626018,'sandra','gikundiro','female','south','huye','tumba','gateme','gikundirosandra@gmail.com','0796454617');
+Query OK, 1 row affected, 2 warnings (0.01 sec)
+
+mysql> insert into ruhande values(1200270103626019,'eric','hirwa','male','north','rurindo','base','hoza','hirwaeric@gmail.com','0736454618');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ruhande values(1200370103626020,'angela','teta','femal','east','gakenke','gakenke','kagoma','tetaangela@gmail.com','0796454619');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ruhande values(1200470103626021,'david','muhizi','male','west','gatsibo','ndoro','gashyata','muhizidavid@gmail.com','0796454619');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ruhande values(1200570103626022,'caline','kuzwe','femal','south','muhanga','nyamabuye','tetero','kuzweceline@gmail.com','0726454620');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ruhande values(1200670103626023,'mark','hirwa','male','kigari','gicumbi','save','musave','hirwamark@gmail.com','0736454621');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ruhande values(1200770103626024,'chris','shema','male','west','nyaruguru','ngoma','umugi','shemachris@gmail.com','0736454622');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ruhande values(1200870103626025,'emma','natete','femal','north','shengero','rutsiro','murambi','nateteemma@gmail.com','0786454623');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ruhande values(1200870103626025,'emma','natete','claudine','west','shimwa','karongi','murava','shejaclaudine@gmail.com','0786454624');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ruhande values(1200970103626026,'claudine','sheja','claudine','west','shimwa','karongi','murava','shejaclaudine@gmail.com','0786454624');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> select*from ruhande;
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+
+| id         | f_name   | l_name    | gender   | province | district  | sector    | cell     | email                | tel_number |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+
+| 2147483647 | cavin    | ishimwe   | mall     | north    | musanze   | muhoza    | kagoma   | ishimwecavin@gmail.c | 0786454628 |
+| 2147483647 | sandra   | gikundiro | female   | south    | huye      | tumba     | gateme   | gikundirosandra@gmai | 0796454617 |
+| 2147483647 | eric     | hirwa     | male     | north    | rurindo   | base      | hoza     | hirwaeric@gmail.com  | 0736454618 |
+| 2147483647 | angela   | teta      | femal    | east     | gakenke   | gakenke   | kagoma   | tetaangela@gmail.com | 0796454619 |
+| 2147483647 | david    | muhizi    | male     | west     | gatsibo   | ndoro     | gashyata | muhizidavid@gmail.co | 0796454619 |
+| 2147483647 | caline   | kuzwe     | femal    | south    | muhanga   | nyamabuye | tetero   | kuzweceline@gmail.co | 0726454620 |
+| 2147483647 | mark     | hirwa     | male     | kigari   | gicumbi   | save      | musave   | hirwamark@gmail.com  | 0736454621 |
+| 2147483647 | chris    | shema     | male     | west     | nyaruguru | ngoma     | umugi    | shemachris@gmail.com | 0736454622 |
+| 2147483647 | emma     | natete    | femal    | north    | shengero  | rutsiro   | murambi  | nateteemma@gmail.com | 0786454623 |
+| 2147483647 | emma     | natete    | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 |
+| 2147483647 | claudine | sheja     | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+
+11 rows in set (0.00 sec)
+
+mysql> martal table ruhande add m_status char(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'martal table ruhande add m_status char(20)' at line 1
+mysql> alter table ruhande add m_status char(20);
+Query OK, 11 rows affected (0.04 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> select*from ruhande;
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+| id         | f_name   | l_name    | gender   | province | district  | sector    | cell     | email                | tel_number | m_status |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+| 2147483647 | cavin    | ishimwe   | mall     | north    | musanze   | muhoza    | kagoma   | ishimwecavin@gmail.c | 0786454628 | NULL     |
+| 2147483647 | sandra   | gikundiro | female   | south    | huye      | tumba     | gateme   | gikundirosandra@gmai | 0796454617 | NULL     |
+| 2147483647 | eric     | hirwa     | male     | north    | rurindo   | base      | hoza     | hirwaeric@gmail.com  | 0736454618 | NULL     |
+| 2147483647 | angela   | teta      | femal    | east     | gakenke   | gakenke   | kagoma   | tetaangela@gmail.com | 0796454619 | NULL     |
+| 2147483647 | david    | muhizi    | male     | west     | gatsibo   | ndoro     | gashyata | muhizidavid@gmail.co | 0796454619 | NULL     |
+| 2147483647 | caline   | kuzwe     | femal    | south    | muhanga   | nyamabuye | tetero   | kuzweceline@gmail.co | 0726454620 | NULL     |
+| 2147483647 | mark     | hirwa     | male     | kigari   | gicumbi   | save      | musave   | hirwamark@gmail.com  | 0736454621 | NULL     |
+| 2147483647 | chris    | shema     | male     | west     | nyaruguru | ngoma     | umugi    | shemachris@gmail.com | 0736454622 | NULL     |
+| 2147483647 | emma     | natete    | femal    | north    | shengero  | rutsiro   | murambi  | nateteemma@gmail.com | 0786454623 | NULL     |
+| 2147483647 | emma     | natete    | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 | NULL     |
+| 2147483647 | claudine | sheja     | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 | NULL     |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+11 rows in set (0.00 sec)
+
+mysql> update ruhande set m_status=single where gender=male;
+ERROR 1054 (42S22): Unknown column 'male' in 'where clause'
+mysql> update ruhande set m_status='single' where gender='male';
+Query OK, 4 rows affected (0.00 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select f_name,email from ruhande;
++----------+----------------------+
+| f_name   | email                |
++----------+----------------------+
+| cavin    | ishimwecavin@gmail.c |
+| sandra   | gikundirosandra@gmai |
+| eric     | hirwaeric@gmail.com  |
+| angela   | tetaangela@gmail.com |
+| david    | muhizidavid@gmail.co |
+| caline   | kuzweceline@gmail.co |
+| mark     | hirwamark@gmail.com  |
+| chris    | shemachris@gmail.com |
+| emma     | nateteemma@gmail.com |
+| emma     | shejaclaudine@gmail. |
+| claudine | shejaclaudine@gmail. |
++----------+----------------------+
+11 rows in set (0.00 sec)
+
+mysql> select * from ruhande;
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+| id         | f_name   | l_name    | gender   | province | district  | sector    | cell     | email                | tel_number | m_status |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+| 2147483647 | cavin    | ishimwe   | mall     | north    | musanze   | muhoza    | kagoma   | ishimwecavin@gmail.c | 0786454628 | NULL     |
+| 2147483647 | sandra   | gikundiro | female   | south    | huye      | tumba     | gateme   | gikundirosandra@gmai | 0796454617 | NULL     |
+| 2147483647 | eric     | hirwa     | male     | north    | rurindo   | base      | hoza     | hirwaeric@gmail.com  | 0736454618 | single   |
+| 2147483647 | angela   | teta      | femal    | east     | gakenke   | gakenke   | kagoma   | tetaangela@gmail.com | 0796454619 | NULL     |
+| 2147483647 | david    | muhizi    | male     | west     | gatsibo   | ndoro     | gashyata | muhizidavid@gmail.co | 0796454619 | single   |
+| 2147483647 | caline   | kuzwe     | femal    | south    | muhanga   | nyamabuye | tetero   | kuzweceline@gmail.co | 0726454620 | NULL     |
+| 2147483647 | mark     | hirwa     | male     | kigari   | gicumbi   | save      | musave   | hirwamark@gmail.com  | 0736454621 | single   |
+| 2147483647 | chris    | shema     | male     | west     | nyaruguru | ngoma     | umugi    | shemachris@gmail.com | 0736454622 | single   |
+| 2147483647 | emma     | natete    | femal    | north    | shengero  | rutsiro   | murambi  | nateteemma@gmail.com | 0786454623 | NULL     |
+| 2147483647 | emma     | natete    | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 | NULL     |
+| 2147483647 | claudine | sheja     | claudine | west     | shimwa    | karongi   | murava   | shejaclaudine@gmail. | 0786454624 | NULL     |
++------------+----------+-----------+----------+----------+-----------+-----------+----------+----------------------+------------+----------+
+11 rows in set (0.00 sec)
